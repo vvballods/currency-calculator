@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+div#root, .container-fluid, .d-flex {
+    height: 100%;
+}
+
+.ant-layout {
+    height: 100%;
+}
