@@ -6,10 +6,8 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.PositiveOrZero
-import javax.validation.constraints.Size
 
 @Entity
 data class Rate(
@@ -17,12 +15,10 @@ data class Rate(
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long,
 
-        @NotBlank
-        @Size(min = 3, max = 3)
+        @NotNull
         val base: Currency,
 
-        @NotBlank
-        @Size(min = 3, max = 3)
+        @NotNull
         val to: Currency,
 
         @NotNull

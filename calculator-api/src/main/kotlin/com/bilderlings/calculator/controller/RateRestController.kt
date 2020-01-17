@@ -33,7 +33,7 @@ class RateRestController(private val rateService: RateService) {
     }
 
     @GetMapping("/calculate")
-    fun calculateRate(@RequestParam amount: Long, @RequestParam from: String, @RequestParam to: String): BigDecimal {
+    fun calculate(@RequestParam amount: Long, @RequestParam from: String, @RequestParam to: String): BigDecimal {
         return rateService.calculate(BigDecimal(amount), Currency.getInstance(from), Currency.getInstance(to))
     }
 }
